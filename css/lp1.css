@@ -48,14 +48,15 @@
     src: url(../Inter/static/Inter-Thin.ttf);
 }
 
+.container{
+    margin: 0px;
+    max-width: 100%;
+    padding: 0px;
+}
+
 div {
     width: 100%;
     font-family: localiza_normal;
-}
-
-hr {
-    background: #78DE1F;
-    border-radius: 20px;
 }
 
 .colLOCNumeros{
@@ -67,7 +68,7 @@ hr {
 }
 
 .colConteudoCorpoEsquerda{
-    padding: 0px 0px 0px 70px;
+    padding: 0px 0px 0px 20px;
 }
 
 .colConteudoCorpoCentro{
@@ -78,7 +79,7 @@ hr {
 }
 
 .colConteudoCorpoDireita{
-    padding: 0px 70px 0px 0px;
+    padding: 0px 200px 0px 0px;
     text-align: justify !important;
 }
 
@@ -113,6 +114,7 @@ hr {
     align-items: center;
     justify-content: center;
     padding: 0px;
+    margin: 0px;
 }
 
 .rowLinksTop {
@@ -124,9 +126,9 @@ hr {
 }
 
 .rowConteudoCorpo {
-    margin: 100px 0px 0px 0px;
+    margin: 80px 0px 0px 0px;
     height: 250px;
-    padding: 0px 0px 0px 0px;
+    padding: 0px 100px 0px 100px;
 }
 
 .button-link {
@@ -143,6 +145,7 @@ hr {
 
 .linkRodape {
     text-decoration: none;
+    color: #0B0A0A;
 }
 
 .button-link_top {
@@ -159,26 +162,50 @@ hr {
 
 .img_E_Grande_1{
     content: url("../Vector E Lateral_Verde_Grande.svg");
-    position: absolute;
+    height: 500px;
+    width: 215px;
     top: 1000px;
-    right: 50px;
-    height: 400px;
+    right: 0px;
+    position: absolute;
+    object-fit: cover;
+    object-position: left;
     z-index: 0;
 }
 
 .img_ACENTO_Grande_2{
     content: url("../Vector ACENTO Lateral_Verde_Grande.svg");
-    height: 820px;
+    height: 480px;
+    width: 290px;
+    top: 1490px;
+    left: 0px;
+    position: absolute;
+    object-fit: cover;
+    object-position: right;
+    z-index: 1;
 }
 
 .img_O_Grande_3{
     content: url("../Vector O Lateral_Verde_Grande.svg");
-    height: 820px;
+    height: 500px;
+    width: 215px;
+    top: 1900px;
+    right: 0px;
+    position: absolute;
+    object-fit: cover;
+    object-position: left;
+    z-index: 0;
 }
 
 .img_L_Grande_4{
     content: url("../Vector L Lateral_Verde_Grande.svg");
-    height: 820px;
+    height: 480px;
+    width: 360px;
+    top: 2370px;
+    left: 0px;
+    position: absolute;
+    object-fit: cover;
+    object-position: right;
+    z-index: 1;
 }
 
 .img_Localiza_corpo_1{
@@ -234,14 +261,15 @@ hr {
     content:url("../Img_7_LocalizaZARP.svg");
     height: 80px;
     width: 80px;
-    object-fit: fill;
+    object-fit: none;
 
 }
 
 .imglocalizaTopo {
     content: url("../Logo-LocalizaECo.svg");
-    width: 250px; 
-    padding: 0px 0px 0px 30px;
+    width: 300px; 
+    padding: 0px;
+    margin: 0px 0px 0px 115px;
 }
 
 .imgSustentabilidade, .imgInstitutoLocaliza, .imgLocalizaLabs, .imgVemPraLozaliza {
@@ -249,6 +277,7 @@ hr {
     border-radius: 90px 16px;
     height: 220px;
     width: 350px;
+    z-index: 2;
 }
 
 .imgSustentabilidade, .imgLocalizaLabs {
@@ -303,14 +332,14 @@ hr {
 .vectorETopo {
     content: url("../Vector & Topo_Grande.svg");
     z-index: 2;
-    right:80px;
+    right:0px;
     position: absolute;
 }
 
-.divIntroduction {
+.divIntroducao {
     background-color: #ffffff;
     height: 180px;
-    padding: 50px 280px 0px 280px;
+    padding: 50px 400px 0px 400px;
     font-size: 10px;
     text-align: justify;
     font-family: 'localiza_Black';
@@ -329,7 +358,7 @@ hr {
     align-items: center;
     text-align: center;
     height: 150px;
-    padding: 0px 100px 0px 100px;
+    padding: 0px 230px 0px 230px;
     background: #f2f2f2;
 }
 
@@ -354,28 +383,34 @@ hr {
     margin-bottom: 100px;
 }
 
+#hr {
+    background: #78DE1F;
+    border-radius: 20px;
+    height: 3px; 
+    margin: 20px 0px 20px 0px; 
+    width: 650px;
+}
+
 #textoTopo_up {
-    margin-top: 130px; 
-    font-size: 24px;
-    text-align: center;
+    margin: 130px 0px 0px 100px;
+    font-size: 30px;
     font-family: localiza_normal;
 }
 
 #textoTopo_down {
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: -0.3px; 
-    width: 300px; 
-    margin: 50px 0px 0px 90px;
+    padding: 50px 200px 0px 105px;
 }
 
 #first-buttom{
     width: 220px; 
-    margin-left: 150px;
+    right: 240px;    
 }
 
 #second-buttom{
     width: 130px; 
-    margin-left: 380px;    
+    right: 100px;    
 }
 
 #primeiroTextoLCONumeros{
@@ -386,9 +421,9 @@ hr {
     letter-spacing: -0.2px;
 }
 
-#textoModalidades{
+#textoMobilidade{
     font-size: 12px;
-    margin: 20px 0px 10px 0px;
+    margin: 0px 0px 10px 0px;
     text-align: center; 
 }
 
@@ -446,5 +481,5 @@ hr {
 
 #rowBlocoCorpo4{
     text-align: center; 
-    padding: 0px 150px 0px 150px;
+    padding: 0px 300px 0px 300px;
 }
