@@ -1,285 +1,220 @@
 <!DOCTYPE html>
-<html>
-	<head>
-                <meta charset="utf-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1">
-            
-                <!-- Bootstrap CSS -->
-                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<html lang="pt-br">
 
-                <link href="css/lp1.css" rel="stylesheet">
-                
-	</head>
-	<body>
-                <div class="container">
-                        <!-- Banner Topo -->
-                        <div class="row rowCenter divTopo">
-                                <div class="col colTopo">
-                                        <p id="textoTopo_up"><b>Olá, nós somos a</b></p>
-                                        <img id="imglocalizaTopo"/>
-                                        <p id="textoTopo_down">Uma <b>plataforma completa de mobilidade</b>, que reúne diversas <b>soluções inovadoras e eficientes.</b></p>
-                                </div>
-                                <div class="col colTopo">
-                                        <div class="vectorETopo2" id="divtam"></div>
-<!--
-                                        <img class="vectorETopo">
-                                        <img class="imgTopo">
--->                                        
-                                        <a href="https://ri.localiza.com" target="new" class="button-link button-link_top" id="first-button">Relacionamento com investidores</a>
-                                        <a href="https://portalcarreira.localiza.com/?_ga=2.263662091.686086498.1664890951-473791302.1646318651" 
-                                        target="new" class="button-link button-link_top" id="second-button">Trabalhe conosco</a>
-                                </div>
-                        </div>
+<head>
+  <title>Nós somos a Localiza&Co</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <script>
+    window.onload = function() {
+      const modal = document.getElementById("modalMob");
+      const openModalBtn = document.getElementById("btnOpenModal");
+      const closeModalBtn = document.getElementById("btnCloseModal");
 
-                        <!-- Accordeon -->
-                        <div class="row rowCenter">
-                                <p id="pIntroducao">
-                                Somos uma das maiores e mais completas plataformas de mobilidade do mundo. Trazemos na nossa história resultados extraordinários, fruto da dedicação de mais de 17 mil colaboradores empenhados em encantar pessoas e escrever com elas histórias incríveis. Com muita ousadia, protagonismo e inovação, oferecemos as melhores soluções de mobilidade, gerando valor para nossos colaboradores, investidores, clientes, parceiros e toda sociedade.
-                                <p>
-                        </div>
+      const openModal = function () {
+        modal.classList.remove("hidden");
+      }
+      const closeModal = function () {
+        modal.classList.add("hidden");
+      };
 
-                        <!-- Faixa cinza abaixo do accordeon -->
-                        <div class="row rowCenter divLCONumeros">
-<!--
-                                <div class="row">
--->                                        
-                                        <div class="col-3">
-                                                <p id="primeiroTextoLCONumeros"><b>L&CO</b> em números:</p>
-                                        </div>
-                                        <div class="col-3 colLOCNumeros">
-                                                <p class="LCONumeros_Verde">1.2M veículos</p>
-                                                <p class="textoLCONumeros">conectados por telemetria</p>
-                                        </div>
-                                        <div class="col-2 colLOCNumeros">
-                                                <p class="LCONumeros_Verde">5 países</p>
-                                                <p class="textoLCONumeros">na América do Sul</p>
-                                        </div>
-                                        <div class="col-2 colLOCNumeros">
-                                                <p class="LCONumeros_Verde">+500 mil</p>
-                                                <p class="textoLCONumeros">carros na frota</p>
-                                        </div>
-                                        <div class="col-2 colLOCNumeros">
-                                                <p class="LCONumeros_Verde">+900</p>
-                                                <p class="textoLCONumeros">pontos físicos</p>
-                                        </div>
-<!--
-                                </div>
--->                                
-                        </div>
+      openModalBtn.addEventListener("click", openModal);
+      closeModalBtn.addEventListener("click", closeModal);
+    };
+  </script>
+</head>
 
-                        <!-- Corpo da página -->
-                        <div class="row rowCenter divCorpo">
-                                <div><img class="img_E_Grande_1"></div>
-                                <div><img class="img_ACENTO_Grande_2"></div>
-                                <div><img class="img_O_Grande_3"></div>
-                                <div><img class="img_L_Grande_4"></div>
-                                <div class="container">
-<!--
-                                        <div class="row rowCenter">
-                                                <spam class="textoCorpo">Toda essa excelência é resultado de quase 50 anos de atuação, e do encontro de duas maiores empresas do segmento, nos consolidando como a maior companhia da categoria em valor de mercado dentre as de capital aberto, e uma das maiores e mais completas plataformas de mobilidade do mundo.
-                                                <p><p>E só falta você para nossa jornada ser ainda mais especial!</spam>
-                                        </div>
--->
-                                        <div class="row rowCenter">
-                                                <spam class="textoCorpo" id="primeiraLinhaCorpo">Conheça nossas <b>marcas</b></spam>
-                                        </div>
-                                        <div class="row rowCenter"><img class="img_Localiza_corpo_1"></div>
-                                        <div class="row rowCenter">
-                                                <spam class="textoCorpo" id="segundaLinhaCorpo">Nesse ecossistema, reunimos nossas soluções de <b>mobilidade para pessoa física.</b></spam>
-                                        </div>
-                                        <div class="row rowCenter" id="rowBlocoCorpo4">
-                                                <div class="col colBlocoCorpo">
-                                                        <div class="row rowCenter"><img class="img_Localiza_corpo_2"></div>
-                                                        <spam class="textoCorpo">Aluguel de curto prazo</spam>
-                                                </div>
-                                                <div class="col colBlocoCorpo">
-                                                        <div class="row rowCenter"><img class="img_Localiza_corpo_3"></div>
-                                                        <spam class="textoCorpo">Assinatura de longo prazo</spam>
-                                                </div>
-                                                <div class="col colBlocoCorpo">
-                                                        <div class="row rowCenter"><img class="img_Localiza_corpo_4"></div>
-                                                        <spam class="textoCorpo">Venda de seminovos</spam>
-                                                </div>
-                                                <div class="col colBlocoCorpo">
-                                                        <div class="row rowCenter"><img class="img_Localiza_corpo_5"></div>
-                                                        <spam class="textoCorpo">Serviços para carros</spam>
-                                                </div>
-                                        </div>
-                                        <div class="row rowCenter">
-                                                <hr id="hr">
-                                                <div class="row rowCenter"><img class="img_Localiza_corpo_6"></div>
-                                                <spam class="textoCorpo" id="textoMobilidade">Todas as soluções de <b>mobilidade para empresas.</b></spam>
-                                        </div>
-                                        <div class="row rowCenter">
-                                                <hr id="hr">
-                                                <div class="row rowCenter"><img class="img_Localiza_corpo_7"></div>
-                                                <spam class="textoCorpo" id="textoMobilidade">Serviços de mobilidade para impulsionar a vida de <b>motoristas de aplicativo.</b></spam>
-                                        </div>
-                                </div>
-                                <div class="container">
-                                        <div class="row rowCenter rowConteudoCorpo">
-                                                <div class="col-4 colConteudoCorpoEsquerda">
-                                                        <div><img class="imgSustentabilidade"></div>
-                                                </div>
-                                                <div class="col-2 colConteudoCorpoCentro">
-                                                        <spam>Sustentabilidade</spam>
-                                                </div>
-                                                <div class="col-6 colConteudoCorpoDireita">
-                                                        <spam class="textoCorpo">
-                                                        <p>Olhamos sempre para o futuro, e para a mobilidade, esse futuro é sustentável.</p>
-                                                        <p>Queremos deixar um legado para o planeta, empresas e pessoas, e para isso, mobilidade e sustentabilidade andam juntas.</p>
-                                                        <p><b>A sustentabilidade está totalmente integrada ao planejamento estratégico do grupo, que investe cada vez mais em projetos e iniciativas nas áreas ambiental, social e de governança.</b></p>
-                                                        </spam>
-                                                        <a href="https://api.mziq.com/mzfilemanager/v2/d/08f327aa-e610-4d9d-b683-8ff0f7caae07/3a909c07-287b-fbcc-907a-90cb4c36bab3?origin=2"
-                                                        target="new" class="button-link button-link_corpo">Acesse o Relatório de Sustentabilidade</a>
-                                                </div>
-                                        </div>
-                                        <div class="row rowCenter rowConteudoCorpo">
-                                                <div class="col-4 colConteudoCorpoEsquerda">
-                                                        <div><img class="imgInstitutoLocaliza"></div>
-                                                </div>
-                                                <div class="col-2 colConteudoCorpoCentro">
-                                                        <spam>Instituto Localiza</spam>                                                        
-                                                </div>
-                                                <div class="col-6 colConteudoCorpoDireita">
-                                                        <spam class="textoCorpo">
-                                                        <p>O Instituto Localiza nasceu para colocar em prática nosso objetivo de ser uma empresa cidadã, atuante no desenvolvimento humano e da sociedade, gerando valor para além do negócio da L&CO.</p>
-                                                        <p><b>O Instituto Localiza promove acesso à educação e empreendedorismo como caminhos para o crescimento, a inclusão produtiva, a autonomia e a melhoria da qualidade de vida nas comunidades.</b></p>
-                                                        <a href="https://www.institutolocaliza.org" target="new" class="button-link button-link_corpo">Conheça o Instituto Localiza</a>
-                                                        </spam>
-                                                </div>
-                                        </div>
-                                        <div class="row rowCenter rowConteudoCorpo">
-                                                <div class="col-4 colConteudoCorpoEsquerda">
-                                                        <div><img class="imgLocalizaLabs"></div>
-                                                </div>
-                                                <div class="col-2 colConteudoCorpoCentro">
-                                                        <spam>Localiza Labs</spam>
-                                                </div>
-                                                <div class="col-6 colConteudoCorpoDireita">
-                                                        <spam class="textoCorpo">
-                                                        <p><b>Contamos com um Laboratório de tecnologia e ciência de dados para construir as melhores soluções de mobilidade, buscando criar experiências cada vez mais digitais e inovadoras para os clientes.</b> Os mais de 1.400 profissionais do Localiza Labs trabalham em um ambiente de colaboração, agilidade e criatividade, e contam com as mais modernas tecnologias do mercado.</p>
-                                                        </spam>
-                                                        <a href="https://medium.com/localizalabs" target="new" class="button-link button-link_corpo">Conheça o Localiza Labs</a>
-                                                </div>
-                                        </div>
-                                        <div class="row rowCenter rowConteudoCorpo" id="lastRowCorpo">
-                                                <div class="col-4 colConteudoCorpoEsquerda">
-                                                        <div class="imgVemPraLozaliza"></div>
-                                                </div>
-                                                <div class="col-2 colConteudoCorpoCentro">
-                                                        <spam>#VemPraLocaliza</spam>                                                        
-                                                </div>
-                                                <div class="col-6 colConteudoCorpoDireita">
-                                                        <spam class="textoCorpo">
-                                                        <p>Acreditamos que movimento gera transformação, e por isso incentivamos o desenvolvimento contínuo dos nossos colaboradores. <b>Valorizamos as pessoas como são, celebrando as diferenças e criando oportunidades de realização em todos os campos.</b></p>
-                                                        <p>E você, quer fazer parte do nosso time e viver esta incrível jornada com a gente?</p>
-                                                        </spam>
-                                                        <a href="https://portalcarreira.localiza.com/?_ga=2.263662091.686086498.1664890951-473791302.1646318651"
-                                                        target="new" class="button-link button-link_corpo">Vem pra Localiza</a>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+<body>
+  <header class="div-banner">
+    <div class="container">
+      <div class="txt-banner">
+        <h1 class="title-banner">Olá, <br class="show-mob"> nós somos a <img src="assets/images/logo.svg" alt="logo" class="img-resp" /></h1>
+        <h2 class="subtitle-banner hide-mob">Uma <b>plataforma completa de mobilidade</b>, que reúne diversas <b>soluções inovadoras e eficientes.</b></h2>
+      </div>
+      <div class="btn-topo">
+        <div class="group-desk">
+          <a href="https://ri.localiza.com/" target="_blank" class="btn-white hide-mob">Relacionamento com investidores</a>
+          <a href="https://portalcarreira.localiza.com/?_ga=2.263662091.686086498.1664890951-473791302.1646318651" target="_blank" class="btn-white hide-mob">Trabalhe conosco</a>
+        </div>
+      </div>
+      <div class="show-mob menu-mob"><a id="btnOpenModal" href="#"><img src="assets/images/icon-menu.svg" alt="logo" class="img-resp" /></a></div>
+    </div>
+  </header>
+  <main>
+    <article class="clearfix">
+      <div class="container">
+        <div class="show-mob">
+          <h2 class="subtitle-banner">Uma <b>plataforma completa de mobilidade</b>, que reúne diversas <b>soluções inovadoras e eficientes.</b></h2>
+        </div>
+        <div class="div-sobre font-gray">
+          <p>Somos uma das maiores e mais completas plataformas de mobilidade do mundo. Trazemos na nossa história resultados extraordinários, fruto da dedicação de mais de 17 mil colaboradores empenhados em encantar pessoas e escrever com elas histórias incríveis. Com muita ousadia, protagonismo e inovação, oferecemos as melhores soluções de mobilidade, gerando valor para nossos colaboradores, investidores, clientes, parceiros e toda sociedade.</p>
+        </div>
+      </div>
+    </article>
+    <article class="clearfix back-gray font-gray">
+      <div class="container">
+        <div class="div-dados">
+          <div class="dado"><b>L&CO</b> em números:</div>
+          <div class="dado"><b class="dado-green">1.2M veículos</b><br>conectados por telemetria</div>
+          <div class="dado"><b class="dado-green">5 países</b><br>na América do Sul</div>
+          <div class="dado"><b class="dado-green">+500 mil</b><br>carros na frota</div>
+          <div class="dado"><b class="dado-green">+900</b><br>pontos físicos</div>
+        </div>
+      </div>
+    </article>
+    <article class="clearfix font-gray back-marcas">
+      <div class="container">
+        <div class="div-marcas">
+          <h1 class="tit-marcas">Conheça nossas <b class="">marcas</b></h1>
+          <div class="marca-prin">
+            <img src="assets/images/marca-localiza.svg" alt="localiza" class="img-loc-1" />
+            <p>Nesse ecossistema, reunimos nossas soluções de <b>mobilidade para pessoa física.</b></p>
+          </div>
+          <div class="flex-marca">
+            <div class="marca">
+              <img src="assets/images/marca-localiza.svg" alt="localiza" class="img-marca" />
+              <p>Aluguel de curto prazo</p>
+            </div>
+            <div class="marca">
+              <img src="assets/images/marca-localiza-meoo.svg" alt="localiza meoo" class="img-marca" />
+              <p>Aluguel de curto prazo</p>
+            </div>
+            <div class="marca">
+              <img src="assets/images/marca-localiza-semi.svg" alt="localiza semi" class="img-marca" />
+              <p>Aluguel de curto prazo</p>
+            </div>
+            <div class="marca">
+              <img src="assets/images/marca-localiza-mais.svg" alt="localiza mais" class="img-marca" />
+              <p>Aluguel de curto prazo</p>
+            </div>
+          </div>
+          <hr class="hr-green" />
+          <div class="marca-prin">
+            <img src="assets/images/marca-localiza-gestao.svg" alt="localiza gestão" class="" />
+            <p>Todas as soluções de <b>mobilidade para empresas.</b></p>
+          </div>
+          <br><br><hr class="hr-green" />
+          <div class="marca-prin">
+            <img src="assets/images/marca-localiza-zarp.svg" alt="zarp" class="" />
+            <p>Serviços de mobilidade para impulsionar a vida de <b>motoristas de aplicativo.</b></p>
+          </div>
+        </div>
+        <div class="div-carac">
+          <div class="flex-carac">
+              <div class="item img-carac flex-img">
+                <img src="assets/images/card-sustentabilidade.png" alt="sustentabilidade" class="img-resp" />
+                <div class="tit-carac"><b>Sustentabilidade</b></div>
+              </div>
+              <div class="item box-carac">
+                <p>Olhamos sempre para o futuro, e para a mobilidade, esse futuro é sustentável.</p>
+                <p>Queremos deixar um legado para o planeta, empresas e pessoas, e para isso, mobilidade e sustentabilidade andam juntas.</p>
+                <p><b>A sustentabilidade está totalmente integrada ao planejamento estratégico do grupo, que investe cada vez mais em projetos e iniciativas nas áreas ambiental, social e de governança.</b></p>
+                <p><a href="https://api.mziq.com/mzfilemanager/v2/d/08f327aa-e610-4d9d-b683-8ff0f7caae07/3a909c07-287b-fbcc-907a-90cb4c36bab3?origin=2" target="_blank" class="btn-white">Acesse o Relatório de Sustentabilidade</a></p>
+              </div>
+          </div>
+          <div class="flex-carac">
+            <div class="item img-carac flex-img">
+              <img src="assets/images/card-instituto.png" alt="instituto" class="img-resp" />
+              <div class="tit-carac">Instituto <b>Localiza</b></div>
+            </div>
+            <div class="item box-carac">
+              <p>O Instituto Localiza nasceu para colocar em prática nosso objetivo de ser uma empresa cidadã, atuante no desenvolvimento humano e da sociedade, gerando valor para além do negócio da L&CO.</p>
+              <p><b>O Instituto Localiza promove acesso à educação e empreendedorismo como caminhos para o crescimento, a inclusão produtiva, a autonomia e a melhoria da qualidade de vida nas comunidades.</b></p>
+              <p><a href="https://www.institutolocaliza.org/" target="_blank" class="btn-white">Conheça o instituto Localiza</a></p>
+            </div>
+          </div>
+          <div class="flex-carac">
+            <div class="item img-carac flex-img">
+              <img src="assets/images/card-labs.png" alt="labs" class="img-resp" />
+              <div class="tit-carac">Localiza <b>Labs</b></div>
+            </div>
+            <div class="item box-carac">
+              <p><b>Contamos com um Laboratório de tecnologia e ciência de dados para construir as melhores soluções de mobilidade, buscando criar experiências cada vez mais digitais e inovadoras para os clientes.</b> Os mais de 1.400 profissionais do Localiza Labs trabalham em um ambiente de colaboração, agilidade e criatividade, e contam com as mais modernas tecnologias do mercado.</p>
+              <p><a href="https://medium.com/localizalabs" target="_blank" class="btn-white">Conheça o Localiza Labs</a></p>
+            </div>
+          </div>
+          <div class="flex-carac">
+            <div class="item img-carac flex-img">
+              <img src="assets/images/card-vempralocaliza.png" alt="vem pra localiza" class="img-resp" />
+              <div class="tit-carac"><b>#VemPraLocaliza</b></div>
+            </div>
+            <div class="item box-carac">
+              <p>Acreditamos que movimento gera transformação, e por isso incentivamos o desenvolvimento contínuo dos nossos colaboradores. <b>Valorizamos as pessoas como são, celebrando as diferenças e criando oportunidades de realização em todos os campos.</b></p>
+              <p>E você, quer fazer parte do nosso time e viver esta incrível jornada com a gente?</p>
+              <p><a href="https://portalcarreira.localiza.com/?_ga=2.263662091.686086498.1664890951-473791302.1646318651" target="_blank" class="btn-white">Vem pra Localiza</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article  class="clearfix back-gray font-gray">
+      <div class="container">
+        <div class="div-imprensa">
+          <h1 class="tit-imprensa">Sala de <b>Imprensa</b></h1>
+          <p><b class="dest">Assessoria de imprensa</b><br> Somente membros da imprensa recebem respostas.</p>
+          <div class="flex-imp">
+            <div class="contato">
+              <p> <span class="dest">Sônia Xavier</span> <br> <a class="mail" href="mailto:sonia.xavier@inpresspni.com.br">sonia.xavier@inpresspni.com.br</a> </p>
+            </div>
+            <div class="contato">
+              <p><span class="dest">Ana Paula Rachid</span> <br> <a class="mail" href="mailto:ana.rachid@inpresspni.com.br">ana.rachid@inpresspni.com.br</a> </p>
+            </div>
+          </div>
+          <p><b class="dest">Para outros assuntos, acesse os canais:</b></p>
+          <div class="flex-imp mb-0">
+            <div class="contato">
+              <p> <span class="dest">Parcerias de marca</span> <br> <a class="mail" href="mailto:parcerias@localiza.com">parcerias@localiza.com</a> </p>
+            </div>
+            <div class="contato">
+              <p><span class="dest">Fornecedores</span> <br> <a class="mail" href="mailto:queroserfornecedor@localiza.com">queroserfornecedor@localiza.com</a> </p>
+            </div>
+            <div class="contato">
+              <p><span class="dest">Jurídico</span> <br> <a class="mail" href="mailto:juridicocriminal@localiza.com">juridicocriminal@localiza.com</a> </p>
+            </div>
+            <div class="contato">
+              <p><span class="dest">Instituto Localiza</span> <br> <a class="mail" href="mailto:oi@institutolocaliza.org">oi@institutolocaliza.org</a> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <section id="modalMob" class="modal hidden">
+      <div class="content-modal">
+        <a id="btnCloseModal" class="btn-close"><img src="assets/images/icon-close.svg" alt="close" class="img-resp" /></a>
+        <div class="flex">
+          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Localiza&Co</span></a>  </div>
+          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Nossas marcas</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Futuro da mobilidade sustentável</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Instituto Localiza</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Localiza Labs</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>#VemPraLocaliza</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Relacionamento com investidores</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Carreiras</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Sala de Imprensa</span></a> </div>
+        </div>
+        <div class="midia-modal">
+          <div class="flex-foo">
+            <div class="item"> <a href="https://www.linkedin.com/company/localiza.com" target="_blank"  class="link-rod"><img src="assets/images/icon-linkedin.svg" alt="linkedin" class="img-resp" /> <span>Linkedin</span> </a> </div>
+            <div class="item"> <a href="https://www.instagram.com/localizacarreiras" target="_blank" class="link-rod"><img src="assets/images/icon-instagram.svg" alt="instagram" class="img-resp" /> <span>Instagram</span> </a> </div>
+            <div class="item"> <a href="https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Localiza-EI_IE23118.13,21.htm" target="_blank" class="link-rod"><img src="assets/images/icon-glassdoor.svg" alt="glassdoor" class="img-resp" /> <span>Glassdoor</span> </a> </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
 
-                        <!-- Faixa cinza sobre o rodapé -->
-                        <div class="row rowCenter divSalaImprensa">
-                                <div class="container">
-                                        <div class="row rowCenter">
-                                                <spam class="textoCorpo" id="primeiraLinhaSalaImprensa">Sala de <b>Imprensa</b></span>
-                                        </div>
-                                        <div class="row rowCenter">
-                                                <spam class="textoCorpo" id="segundaLinhaSalaImprensaUP">
-                                                        Assessoria de Imprensa
-                                                        <spam id="segundaLinhaSalaImprensaDOWN"><br>Somente membros da imprensa recebem respostas.</spam>
-                                                </spam>
-                                        </div>
-                                        <div class="row rowCenter">
-                                                <div class="col-3">
-                                                        <spam class="textoCorpo" id="terceiraLinhaSalaImprensaUP">
-                                                                Sônia Xavier
-                                                                <spam id="terceiraLinhaSalaImprensaDOWN"><br>
-                                                                        <a class="linkRodape" href="mailto:sonia.xavier@inpresspni.com.br">sonia.xavier@inpresspni.com.br</a>
-                                                                </spam>
-                                                        </spam>
-                                                </div>
-                                                <div class="col-9">
-                                                        <spam class="textoCorpo" id="terceiraLinhaSalaImprensaUP">
-                                                                Ana Paula Rachid
-                                                                <spam id="terceiraLinhaSalaImprensaDOWN"><br>
-                                                                        <a class="linkRodape" href="mailto:ana.rachid@inpresspni.com.br">ana.rachid@inpresspni.com.br</a>
-                                                                </spam>
-                                                        </spam>
-                                                </div>
-                                        </div>
-                                        <div class="row rowCenter">
-                                                <spam class="textoCorpo" id="quartaLinhaSalaImprensa">
-                                                        Para outros assuntos, acesse os canais:
-                                                </spam>
-                                        </div>
-                                        <div class="row rowCenter">
-                                                <div class="col">
-                                                        <spam class="textoCorpo" id="quintaLinhaSalaImprensaUP">
-                                                                Parcerias de marca
-                                                                <spam id="quintaLinhaSalaImprensaDOWN"><br>
-                                                                        <a class="linkRodape" href="mailto:parcerias@localiza.com">parcerias@localiza.com</a>
-                                                                </spam>
-                                                        </spam>
-                                                </div>
-                                                <div class="col">
-                                                        <spam class="textoCorpo" id="quintaLinhaSalaImprensaUP">
-                                                                Fornecedores
-                                                                <spam id="quintaLinhaSalaImprensaDOWN"><br>
-                                                                        <a class="linkRodape" href="mailto:queroserfornecedor@localiza.com">queroserfornecedor@localiza.com</a>
-                                                                </spam>
-                                                        </spam>
-                                                </div>
-                                                <div class="col">
-                                                        <spam class="textoCorpo" id="quintaLinhaSalaImprensaUP">
-                                                                Jurídico
-                                                                <spam id="quintaLinhaSalaImprensaDOWN"><br>
-                                                                        <a class="linkRodape" href="mailto:juridicocriminal@localiza.com">juridicocriminal@localiza.com</a>
-                                                                </spam>
-                                                        </spam>
-                                                </div>
-                                                <div class="col">
-                                                        <spam class="textoCorpo" id="quintaLinhaSalaImprensaUP">
-                                                                Instituto Localiza
-                                                                <spam id="quintaLinhaSalaImprensaDOWN"><br>
-                                                                        <a class="linkRodape" href="mailto:oi@institutolocaliza.org">oi@institutolocaliza.org</a>
-                                                                </spam>
-                                                        </spam>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
+<footer class="clearfix back-dark pad-rod">
+  <div class="container">
+    <div class="flex-foo">
+      <div class="item"> <a href="https://www.linkedin.com/company/localiza.com" target="_blank"  class="link-rod"><img src="assets/images/icon-linkedin.svg" alt="linkedin" class="img-resp" /> <span>Linkedin</span> </a> </div>
+      <div class="item"> <a href="https://www.instagram.com/localizacarreiras" target="_blank" class="link-rod"><img src="assets/images/icon-instagram.svg" alt="instagram" class="img-resp" /> <span>Instagram</span> </a> </div>
+      <div class="item"> <a href="https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Localiza-EI_IE23118.13,21.htm" target="_blank" class="link-rod"><img src="assets/images/icon-glassdoor.svg" alt="glassdoor" class="img-resp" /> <span>Glassdoor</span> </a> </div>
+    </div>
+    <p class="txt-rodape"> <small> © Localiza - Todos os direitos reservados </small> </p>
+  </div>
+</footer>
 
-                        <!-- Rodapé -->
-                        <div class="row rowCenter divRodape">
-                                <div class="row rowCenter">
-                                        <div class="col">
-                                                <a class="linkRodape" target="new" href="https://www.linkedin.com/company/localiza.com">
-                                                        <img class="icon_linkedin">
-                                                        <spam class="textoCorpo textoRodape">LinkedIn</spam>
-                                                </a>
-                                        </div>
-                                        <div class="col">
-                                                <a class="linkRodape" target="new" href="https://www.instagram.com/localizacarreiras">
-                                                        <img class="icon_Instagram">
-                                                        <spam class="textoCorpo textoRodape">Instagram</spam>
-                                                </a>
-                                        </div>
-                                        <div class="col">
-                                                <a class="linkRodape" target="new" href="https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Localiza-EI_IE23118.13,21.htm">
-                                                        <img class="icon_Glassdoor">
-                                                        <spam class="textoCorpo textoRodape">Glassdoor</spam>
-                                                </a>
-                                        </div>
-                                </div>
-                                <div class="row rowCenter">
-                                        <spam class="textoCorpo textoRodape">© Localiza - Todos os direitos reservados</spam>
-                                </div>
-                        </div>
-                </div>
-	</body>
 </html>
