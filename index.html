@@ -5,31 +5,10 @@
   <title>Nós somos a Localiza&Co</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/index.css" />
-  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      $("#btnOpenModal").click(function(){
-        $("#modalMob").removeClass("hidden");
-      });
-      $("#btnCloseModal").click(function(){
-        $("#modalMob").addClass("hidden");
-      });
-
-      const $root = $('html, body');
-      $('a[href^="#"]').click(function() {
-          $("#modalMob").addClass("hidden");
-          const href = $.attr(this, 'href');
-          $root.animate({
-            scrollTop: $(href).offset().top
-          }, 500, function() {
-            window.location.hash = href;
-          });
-          return false;
-        });
-    });
-  </script>
+  <link rel="stylesheet" href="assets/css/captcha.css">
+  <script src="assets/js/jquery-3.5.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </head>
 
 <body>
@@ -119,8 +98,8 @@
                 <div class="tit-carac"><b>Sustentabilidade</b></div>
               </div>
               <div class="item box-carac">
-                <p>Olhamos sempre para o futuro, e para a mobilidade, esse futuro é sustentável.</p>
-                <p>Queremos deixar um legado para o planeta, empresas e pessoas, e para isso, mobilidade e sustentabilidade andam juntas.</p>
+                <p>Olhamos sempre para o futuro e para a mobilidade: esse futuro é sustentável.</p>
+                <p>Queremos deixar um legado para o planeta, empresas e pessoas. Para isso, mobilidade e sustentabilidade andam juntas.</p>
                 <p><b>A sustentabilidade está totalmente integrada ao planejamento estratégico do grupo, que investe cada vez mais em projetos e iniciativas nas áreas ambiental, social e de governança.</b></p>
                 <p><a href="https://api.mziq.com/mzfilemanager/v2/d/08f327aa-e610-4d9d-b683-8ff0f7caae07/3a909c07-287b-fbcc-907a-90cb4c36bab3?origin=2" target="_blank" class="btn-white">Acesse o Relatório de Sustentabilidade</a></p>
               </div>
@@ -133,7 +112,7 @@
             <div class="item box-carac">
               <p>O Instituto Localiza nasceu para colocar em prática nosso objetivo de ser uma empresa cidadã, atuante no desenvolvimento humano e da sociedade, gerando valor para além do negócio da L&CO.</p>
               <p><b>O Instituto Localiza promove acesso à educação e empreendedorismo como caminhos para o crescimento, a inclusão produtiva, a autonomia e a melhoria da qualidade de vida nas comunidades.</b></p>
-              <p><a href="https://www.institutolocaliza.org/" target="_blank" class="btn-white">Conheça o instituto Localiza</a></p>
+              <p><a href="https://www.institutolocaliza.org/" target="_blank" class="btn-white">Conheça o Instituto Localiza</a></p>
             </div>
           </div>
           <div id="localizaLabs" class="flex-carac">
@@ -142,7 +121,7 @@
               <div class="tit-carac">Localiza <b>Labs</b></div>
             </div>
             <div class="item box-carac">
-              <p><b>Contamos com um Laboratório de tecnologia e ciência de dados para construir as melhores soluções de mobilidade, buscando criar experiências cada vez mais digitais e inovadoras para os clientes.</b> Os mais de 1.400 profissionais do Localiza Labs trabalham em um ambiente de colaboração, agilidade e criatividade, e contam com as mais modernas tecnologias do mercado.</p>
+              <p><b>Contamos com um Laboratório de tecnologia e ciência de dados para construir as melhores soluções de mobilidade, buscando criar experiências cada vez mais digitais e inovadoras para os clientes.</b> Os mais de 1.700 profissionais do Localiza Labs trabalham em um ambiente de colaboração, agilidade e criatividade, e contam com as mais modernas tecnologias do mercado.</p>
               <p><a href="https://medium.com/localizalabs" target="_blank" class="btn-white">Conheça o Localiza Labs</a></p>
             </div>
           </div>
@@ -167,25 +146,25 @@
           <p><b class="dest">Assessoria de imprensa</b><br> Somente membros da imprensa recebem respostas.</p>
           <div class="flex-imp">
             <div class="contato">
-              <p> <span class="dest">Sônia Xavier</span> <br> <a class="mail" href="mailto:sonia.xavier@inpresspni.com.br">sonia.xavier@inpresspni.com.br</a> </p>
+              <p> <span class="dest">Sônia Xavier</span> <br> <a class="mail" href="javascript:openModalCaptcha('sonia.xavier@inpresspni.com.br')">sonia.xavier@inpresspni.com.br</a> </p>
             </div>
             <div class="contato">
-              <p><span class="dest">Ana Paula Rachid</span> <br> <a class="mail" href="mailto:ana.rachid@inpresspni.com.br">ana.rachid@inpresspni.com.br</a> </p>
+              <p><span class="dest">Ana Paula Rachid</span> <br> <a class="mail" href="javascript:openModalCaptcha('ana.rachid@inpresspni.com.br')">ana.rachid@inpresspni.com.br</a> </p>
             </div>
           </div>
           <p><b class="dest">Para outros assuntos, acesse os canais:</b></p>
           <div class="flex-imp mb-0">
             <div class="contato">
-              <p> <span class="dest">Parcerias de marca</span> <br> <a class="mail" href="mailto:parcerias@localiza.com">parcerias@localiza.com</a> </p>
+              <p> <span class="dest">Parcerias de marca</span> <br> <a class="mail" href="javascript:openModalCaptcha('parcerias@localiza.com')">parcerias@localiza.com</a> </p>
             </div>
             <div class="contato">
-              <p><span class="dest">Fornecedores</span> <br> <a class="mail" href="mailto:queroserfornecedor@localiza.com">queroserfornecedor@localiza.com</a> </p>
+              <p><span class="dest">Fornecedores</span> <br> <a class="mail" href="javascript:openModalCaptcha('queroserfornecedor@localiza.com')">queroserfornecedor@localiza.com</a> </p>
             </div>
             <div class="contato">
-              <p><span class="dest">Jurídico</span> <br> <a class="mail" href="mailto:juridicocriminal@localiza.com">juridicocriminal@localiza.com</a> </p>
+              <p><span class="dest">Jurídico</span> <br> <a class="mail" href="javascript:openModalCaptcha('juridicocriminal@localiza.com')">juridicocriminal@localiza.com</a> </p>
             </div>
             <div class="contato">
-              <p><span class="dest">Instituto Localiza</span> <br> <a class="mail" href="mailto:oi@institutolocaliza.org">oi@institutolocaliza.org</a> </p>
+              <p><span class="dest">Instituto Localiza</span> <br> <a class="mail" href="javascript:openModalCaptcha('oi@institutolocaliza.org')">oi@institutolocaliza.org</a> </p>
             </div>
           </div>
         </div>
@@ -207,11 +186,29 @@
         </div>
         <div class="midia-modal">
           <div class="flex-foo">
-            <div class="item"> <a href="https://www.linkedin.com/company/localiza.com" target="_blank"  class="link-rod"><img src="assets/images/icon-linkedin.svg" alt="linkedin" class="img-resp" /> <span>Linkedin</span> </a> </div>
+            <div class="item"> <a href="https://www.linkedin.com/company/localiza/" target="_blank"  class="link-rod"><img src="assets/images/icon-linkedin.svg" alt="linkedin" class="img-resp" /> <span>Linkedin</span> </a> </div>
             <div class="item"> <a href="https://www.instagram.com/localizacarreiras" target="_blank" class="link-rod"><img src="assets/images/icon-instagram.svg" alt="instagram" class="img-resp" /> <span>Instagram</span> </a> </div>
             <div class="item"> <a href="https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Localiza-EI_IE23118.13,21.htm" target="_blank" class="link-rod"><img src="assets/images/icon-glassdoor.svg" alt="glassdoor" class="img-resp" /> <span>Glassdoor</span> </a> </div>
           </div>
         </div>
+      </div>
+    </section>
+    <section id="modalCaptcha" class="modal modal-captcha hidden">
+      <div class="content-modal">
+        <fieldset class="captchaField">
+          <a id="btnCloseModalCaptcha" class="btn-close btn-close-captcha"><img src="assets/images/icon-close.svg" alt="close" class="img-resp" /></a>
+          <span id="SuccessMessage" class="success">Obrigado! o captcha está correto.</span>
+          <input type="text" id="UserCaptchaCode" class="CaptchaTxtField" placeholder='Digite exatamente o código abaixo...'>
+          <span id="WrongCaptchaError" class="error"></span>
+          <div class='CaptchaWrap'>
+            <div id="CaptchaImageCode" class="CaptchaTxtField">
+              <canvas id="CapCode" class="capcode" width="300" height="80"></canvas>
+            </div> 
+            <input type="button" class="ReloadBtn" onclick='createCaptcha();'>
+          </div>
+          <input id="emailTo" type="hidden" /> 
+          <input type="button" class="btnSubmit" onclick="checkCaptcha();" value="Enviar">
+        </fieldset>
       </div>
     </section>
   </main>
@@ -220,7 +217,7 @@
 <footer class="clearfix back-dark pad-rod">
   <div class="container">
     <div class="flex-foo">
-      <div class="item"> <a href="https://www.linkedin.com/company/localiza.com" target="_blank"  class="link-rod"><img src="assets/images/icon-linkedin.svg" alt="linkedin" class="img-resp" /> <span>Linkedin</span> </a> </div>
+      <div class="item"> <a href="https://www.linkedin.com/company/localiza/" target="_blank"  class="link-rod"><img src="assets/images/icon-linkedin.svg" alt="linkedin" class="img-resp" /> <span>Linkedin</span> </a> </div>
       <div class="item"> <a href="https://www.instagram.com/localizacarreiras" target="_blank" class="link-rod"><img src="assets/images/icon-instagram.svg" alt="instagram" class="img-resp" /> <span>Instagram</span> </a> </div>
       <div class="item"> <a href="https://www.glassdoor.com.br/Vis%C3%A3o-geral/Trabalhar-na-Localiza-EI_IE23118.13,21.htm" target="_blank" class="link-rod"><img src="assets/images/icon-glassdoor.svg" alt="glassdoor" class="img-resp" /> <span>Glassdoor</span> </a> </div>
     </div>
