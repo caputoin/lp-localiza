@@ -7,27 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/index.css" />
+  <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
   <script>
-    window.onload = function() {
-      const modal = document.getElementById("modalMob");
-      const openModalBtn = document.getElementById("btnOpenModal");
-      const closeModalBtn = document.getElementById("btnCloseModal");
+    $(document).ready(function() {
+      $("#btnOpenModal").click(function(){
+        $("#modalMob").removeClass("hidden");
+      });
+      $("#btnCloseModal").click(function(){
+        $("#modalMob").addClass("hidden");
+      });
 
-      const openModal = function () {
-        modal.classList.remove("hidden");
-      }
-      const closeModal = function () {
-        modal.classList.add("hidden");
-      };
-
-      openModalBtn.addEventListener("click", openModal);
-      closeModalBtn.addEventListener("click", closeModal);
-    };
+      const $root = $('html, body');
+      $('a[href^="#"]').click(function() {
+          $("#modalMob").addClass("hidden");
+          const href = $.attr(this, 'href');
+          $root.animate({
+            scrollTop: $(href).offset().top
+          }, 500, function() {
+            window.location.hash = href;
+          });
+          return false;
+        });
+    });
   </script>
 </head>
 
 <body>
-  <header class="div-banner">
+  <header id="topo" class="div-banner">
     <div class="container">
       <div class="txt-banner">
         <h1 class="title-banner">Olá, <br class="show-mob"> nós somos a <img src="assets/images/logo.svg" alt="logo" class="img-resp" /></h1>
@@ -39,7 +45,7 @@
           <a href="https://portalcarreira.localiza.com/?_ga=2.263662091.686086498.1664890951-473791302.1646318651" target="_blank" class="btn-white hide-mob">Trabalhe conosco</a>
         </div>
       </div>
-      <div class="show-mob menu-mob"><a id="btnOpenModal" href="#"><img src="assets/images/icon-menu.svg" alt="logo" class="img-resp" /></a></div>
+      <div class="show-mob menu-mob"><a id="btnOpenModal" href="javascript:void(0)"><img src="assets/images/icon-menu.svg" alt="logo" class="img-resp" /></a></div>
     </div>
   </header>
   <main>
@@ -64,7 +70,7 @@
         </div>
       </div>
     </article>
-    <article class="clearfix font-gray back-marcas">
+    <article id="marcas" class="clearfix font-gray back-marcas">
       <div class="container">
         <div class="div-marcas">
           <h1 class="tit-marcas">Conheça nossas <b class="">marcas</b></h1>
@@ -79,19 +85,19 @@
             </div>
             <div class="marca">
               <img src="assets/images/marca-localiza-meoo.svg" alt="localiza meoo" class="img-marca" />
-              <p>Aluguel de curto prazo</p>
-            </div>
-            <div class="marca">
-              <img src="assets/images/marca-localiza-semi.svg" alt="localiza semi" class="img-marca" />
-              <p>Aluguel de curto prazo</p>
+              <p>Assinatura de longo prazo</p>
             </div>
             <div class="marca">
               <img src="assets/images/marca-localiza-mais.svg" alt="localiza mais" class="img-marca" />
-              <p>Aluguel de curto prazo</p>
+              <p>Serviços para carros</p>
+            </div>
+            <div class="marca">
+              <img src="assets/images/marca-localiza-semi.svg" alt="localiza semi" class="img-marca" />
+              <p>Venda de seminovos</p>
             </div>
           </div>
           <hr class="hr-green" />
-          <div class="marca-prin">
+          <div id="mobilidade" class="marca-prin">
             <img src="assets/images/marca-localiza-gestao.svg" alt="localiza gestão" class="" />
             <p>Todas as soluções de <b>mobilidade para empresas.</b></p>
           </div>
@@ -99,6 +105,11 @@
           <div class="marca-prin">
             <img src="assets/images/marca-localiza-zarp.svg" alt="zarp" class="" />
             <p>Serviços de mobilidade para impulsionar a vida de <b>motoristas de aplicativo.</b></p>
+          </div>
+          <br><br><hr class="hr-green" />
+          <div class="marca-prin">
+            <img src="assets/images/marca-eqip.svg" alt="zarp" class="" />
+            <p>Soluções para <b>oficinas mecânicas.</b></p>
           </div>
         </div>
         <div class="div-carac">
@@ -114,7 +125,7 @@
                 <p><a href="https://api.mziq.com/mzfilemanager/v2/d/08f327aa-e610-4d9d-b683-8ff0f7caae07/3a909c07-287b-fbcc-907a-90cb4c36bab3?origin=2" target="_blank" class="btn-white">Acesse o Relatório de Sustentabilidade</a></p>
               </div>
           </div>
-          <div class="flex-carac">
+          <div id="instituto" class="flex-carac">
             <div class="item img-carac flex-img">
               <img src="assets/images/card-instituto.png" alt="instituto" class="img-resp" />
               <div class="tit-carac">Instituto <b>Localiza</b></div>
@@ -125,7 +136,7 @@
               <p><a href="https://www.institutolocaliza.org/" target="_blank" class="btn-white">Conheça o instituto Localiza</a></p>
             </div>
           </div>
-          <div class="flex-carac">
+          <div id="localizaLabs" class="flex-carac">
             <div class="item img-carac flex-img">
               <img src="assets/images/card-labs.png" alt="labs" class="img-resp" />
               <div class="tit-carac">Localiza <b>Labs</b></div>
@@ -135,7 +146,7 @@
               <p><a href="https://medium.com/localizalabs" target="_blank" class="btn-white">Conheça o Localiza Labs</a></p>
             </div>
           </div>
-          <div class="flex-carac">
+          <div id="vempralocaliza" class="flex-carac">
             <div class="item img-carac flex-img">
               <img src="assets/images/card-vempralocaliza.png" alt="vem pra localiza" class="img-resp" />
               <div class="tit-carac"><b>#VemPraLocaliza</b></div>
@@ -149,7 +160,7 @@
         </div>
       </div>
     </article>
-    <article  class="clearfix back-gray font-gray">
+    <article id="imprensa"  class="clearfix back-gray font-gray">
       <div class="container">
         <div class="div-imprensa">
           <h1 class="tit-imprensa">Sala de <b>Imprensa</b></h1>
@@ -184,15 +195,15 @@
       <div class="content-modal">
         <a id="btnCloseModal" class="btn-close"><img src="assets/images/icon-close.svg" alt="close" class="img-resp" /></a>
         <div class="flex">
-          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Localiza&Co</span></a>  </div>
-          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Nossas marcas</span></a> </div>
-          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Futuro da mobilidade sustentável</span></a> </div>
-          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Instituto Localiza</span></a> </div>
-          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Localiza Labs</span></a> </div>
-          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>#VemPraLocaliza</span></a> </div>
-          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Relacionamento com investidores</span></a> </div>
-          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Carreiras</span></a> </div>
-          <div class="item"> <a class="link-mob" href="#"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Sala de Imprensa</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#topo"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Localiza&Co</span></a>  </div>
+          <div class="item"> <a class="link-mob" href="#marcas"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Nossas marcas</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#mobilidade"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Futuro da mobilidade sustentável</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#instituto"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Instituto Localiza</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#localizaLabs"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Localiza Labs</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#vempralocaliza"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>#VemPraLocaliza</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#imprensa"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Relacionamento com investidores</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#imprensa"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Carreiras</span></a> </div>
+          <div class="item"> <a class="link-mob" href="#imprensa"><img src="assets/images/icon-bulletpoint.svg" alt="close" class="img-resp" /> <span>Sala de Imprensa</span></a> </div>
         </div>
         <div class="midia-modal">
           <div class="flex-foo">
