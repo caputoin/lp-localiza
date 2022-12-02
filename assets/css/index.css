@@ -816,6 +816,8 @@ body .modal .content-modal .btn-close-captcha {
     }
     body .flex-carac .tit-carac {
         margin-left: 0px;
+        width: 130px;
+        text-align: left;
     }
 }
 
