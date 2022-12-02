@@ -487,10 +487,13 @@ body .modal .content-modal .btn-close-captcha {
     .div-dados,
     .flex-marca {
         flex-direction: column;
+        text-align: left;
+        align-items: center;
     }
 
     .marca {
         flex-direction: row;
+        gap: 50px;
     }
 
     .marca p,
@@ -577,6 +580,21 @@ body .modal .content-modal .btn-close-captcha {
 
     .marca p {
         font-size: 14px;
+        width: 180px;
+    }
+
+    body .flex-marca .marca:nth-child(1) img {
+        margin-left: -5px;
+    }
+
+    body .flex-marca .marca:nth-child(2) img {
+        margin-left: -12px;
+        margin-right: 12px;
+    }
+
+    body .flex-marca .marca:nth-child(4) img {
+        margin-left: -5px;
+        margin-right: 5px;
     }
 
     body .flex-carac:nth-child(odd) .tit-carac {
@@ -792,6 +810,15 @@ body .modal .content-modal .btn-close-captcha {
     }
 }
 
+@media screen and (min-width: 993px) and (max-width: 1151px)  {
+    body .flex-carac {
+        gap: 40px;
+    }
+    body .flex-carac .tit-carac {
+        margin-left: 0px;
+    }
+}
+
 @media screen and (min-width: 1500px) {
     .container {
         max-width: 80%;
@@ -902,3 +929,10 @@ body .modal .content-modal .btn-close-captcha {
     }
     .flex-carac .tit-carac {margin-left: 0;}
 }
+
+@media screen and (min-width: 1500px) and (max-width: 1600px){
+    .flex-carac .tit-carac {
+        font-size: 18px;
+    }
+}
+
