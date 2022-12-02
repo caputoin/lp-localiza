@@ -169,7 +169,7 @@ body {
     overflow: hidden;
     background-color: #fff;
     background-image: url(../images/back-body-1.png), url(../images/back-body-2.png), url(../images/back-body-3.png), url(../images/back-body-4.png);
-    background-position: right 2%, left 50%, right 67%, -3% 102%;
+    background-position: right 2%, left 45%, right 67%, -3% 102%;
     background-size: 320px, 350px, 180px, 300px;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 }
@@ -805,7 +805,7 @@ body .modal .content-modal .btn-close-captcha {
     }
 
     .back-marcas {
-        background-position: 107% 2%, left 48%, right 67%, -5% 102%;
+        background-position: 107% 2%, left 43%, right 67%, -3% 102%;
         background-size: 270px, 350px, 180px, 300px
     }
 }
@@ -910,7 +910,7 @@ body .modal .content-modal .btn-close-captcha {
     }
 
     .back-marcas {
-        background-position: right 2%, left 41%, right 64%, -3% 103%;
+        background-position: right 2%, left 36%, right 64%, -3% 103%;
         background-size: 360px, 485px, 250px, 530px
     }
 
