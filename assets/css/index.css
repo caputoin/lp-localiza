@@ -551,6 +551,7 @@ body .modal .content-modal .btn-close-captcha {
     .txt-banner .title-banner {
         font-size: 32px;
         line-height: 1.2em;
+        font-weight: normal;
     }
 
     .txt-banner .title-banner img {
@@ -574,6 +575,7 @@ body .modal .content-modal .btn-close-captcha {
     .dado:first-child,
     .dado {
         font-size: 24px;
+        text-align: center;
     }
 
     .dado-green {
