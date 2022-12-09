@@ -623,7 +623,7 @@ body .modal .content-modal .btn-close-captcha {
     }
 
     .menu-mob {
-        position: absolute;
+        position: fixed;
         right: 30px;
         top: 25px;
     }
